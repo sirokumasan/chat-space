@@ -10,8 +10,8 @@
 |user_id|integer|null: false, forgin_key: true|
 
 ### Association
-belongs_to :user
-belongs_to :group
+-belongs_to :user
+-belongs_to :group
 
 
 
@@ -21,9 +21,9 @@ belongs_to :group
 |name|string|null: false, index: true|
 
 ### Association
-has_many :groups_users
-has_many :users, through: :groups_users
-has_many :messages
+-has_many :groups_users
+-has_many :users, through: :groups_users
+-has_many :messages
 
 
 
@@ -35,9 +35,9 @@ has_many :messages
 |password|string|null: false|
 
 ### Association
-has_many :groups_users
-has_many :groups, througt: :groups_users
-has_many :messages
+-has_many :groups_users
+-has_many :groups, througt: :groups_users
+-has_many :messages
 
 
 
@@ -48,5 +48,5 @@ has_many :messages
 |group_id|integer|null: false, forgin_key: true|
 
 ### Association
-belongs_to :group
-belongs_to :user
+-belongs_to :group
+-belongs_to :user
