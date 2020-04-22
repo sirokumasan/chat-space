@@ -1,0 +1,40 @@
+.main_chat
+  .main_chat__header
+    .main_chat__header__box
+      .main_chat__header__box__left
+        .main_chat__header__box__left--message 
+          test
+        .main_chat__header__box__left--member 
+          member : aa, bb, cc
+      .main_chat__header__box--edit 
+        =link_to "#" do
+          Edit
+          
+  .main_chat__message
+    .main_chat__message__content
+      .main_chat__message__content--name
+        messa
+        %span 2020/04/22(wed) 12:00::00
+      .main_chat__message__content--message
+        ハローー
+    .main_chat__message__content
+      .main_chat__message__content--name
+        messa
+        %span 2020/04/22(wed) 12:00::00
+      .main_chat__message__content--message
+        ハローーや
+    .main_chat__message__content
+      .main_chat__message__content--name
+        messa
+        %span 2020/04/22(wed) 12:00::00
+      .main_chat__message__content--message
+        ハローー
+
+  .main_chat__footer
+    %form{class: "message"}
+      .message__input
+        %input{type: "text", placeholder: "type a message", class: "message__input--text"}
+        %label{class: "message__input--image"}
+          =icon('fas','image',class: "message__input--image--size")
+          %input{type: "file", class:"message__input--image--btn"}
+      %input{type: "submit", value: "Send", class: "message--btn"}

@@ -1,0 +1,112 @@
+.main_chat {
+  width: calc(100vw - 300px);
+  height: 100vh;
+  float: right;
+  background-color: $whiteColor;
+  &__header {
+    height: 100px;
+    border: 1px solid #eeeeee;
+    &__box {
+      @include flex(space-between);
+      align-items: center;
+      height: 100%;
+      margin: 0px 40px;
+      &__left {
+        margin-top: 35px;
+        &--message {
+          color: #333333;
+          font-size: 20px;
+        }
+        &--member {
+          color: #999999;
+          font-size: 12px;
+          margin-top: 15px;
+        }
+      }
+      &--edit {
+        border: 1px solid #38aef0;
+        font-size: 16px;
+        line-height: 40px;
+        width: 72px;
+        margin: 28px 0px 32px 0px;
+        text-align: center;
+        cursor: pointer;
+      }
+      & a {
+        text-decoration: none;
+        color: #38aef0;
+      }
+    }
+  }
+
+  &__message {
+    height: calc(100vh - 190px);  
+    overflow: hidden;
+    padding-top: 35px;
+    background-color: #fafafa;
+    &__content {
+      height: 88px;
+      margin-left: 40px;
+      &--name {
+        color: #333333;
+        @include font(16px);
+        height: 16px;
+        line-height: 16px;
+      }
+      & span {
+        color: #999999;
+        font-size: 12px;
+        vertical-align: top;
+        font-weight: normal;
+      }
+      &--message {
+        height: 14px;
+        line-height: 14px;
+        color: #434A54;
+        margin: 12px 0px 46px;
+      }
+    }
+  }
+
+  &__footer {
+    height: 90px;
+    background-color: #d2d2d2;
+  }
+}
+
+.message {
+  display: flex;
+  height: 100%;
+  padding: 0px 40px;
+  align-items: center;
+  &__input {
+    height: 50px;
+    width: calc(100vw - 195px);
+    position: relative;
+    &--text {
+      @include size(100%, 100%);
+      padding: 0px 50px 0px 10px;
+    }
+    &--image {
+      position: absolute;
+      top :10px;
+      right: 10px;
+      bottom: 10px;
+      cursor: pointer;
+      &--size {
+        font-size: 30px;
+      }
+      &--btn {
+        display: none;
+      }
+    }
+  }
+  &--btn {
+    background-color: skyblue;
+    color: $whiteColor;
+    width: 100px;
+    height: 50px;
+    margin-left: 15px;
+    cursor: pointer;
+  }  
+}
