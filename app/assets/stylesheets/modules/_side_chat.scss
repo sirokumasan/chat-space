@@ -1,0 +1,53 @@
+.side_bar {
+  background-color: $backColor;
+  @include size();
+  float: left;
+  &__top {
+    background-color: $backColor;
+    @include size(100px, 100%);
+    display: flex;
+    align-items: center;
+    &__user {
+      @include size(20px, 260px);
+      margin-left: 20px;
+      display: flex;
+      justify-content: space-between;
+      &--name {
+        @include font();
+        line-height: 20px;
+        color: $whiteColor;
+      }
+      &--icons {
+        @include size(20px, 60px);
+        @include flex();
+        a {
+          text-decoration: none;
+          color: $whiteColor;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+  
+  &__group {
+    height: calc(100vh - 100px);
+    background-color: #2f3e51;
+    &__list {
+      height: 91px;
+      overflow: hidden;
+      color: $whiteColor;
+      &--name {
+        @include size(15px, 260px);
+        line-height: 15px;
+        @include font(15px);
+        margin: 20px 0px 0px 20px;
+      }
+      &--message {
+        @include size(11px, 260px);
+        @include font(11px);
+        line-height: 11px;
+        margin: 5px 0px 0px 20px;
+      }
+    }
+  }
+}

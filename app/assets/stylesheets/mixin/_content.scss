@@ -1,0 +1,17 @@
+@mixin size($height: 100vh, $width: 300px) {
+  height: $height;
+  width: $width;
+}
+
+@mixin flex($flex-end: flex-end){
+  display: flex;
+  justify-content: $flex-end;
+}
+
+@mixin font($font: 16px) {
+  font-size: $font;
+  font-weight: bold;
+}
+
+$whiteColor: #ffffff;
+$backColor: #253141;
