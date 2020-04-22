@@ -1,11 +1,12 @@
 .side_bar
   .side_bar__top
     .side_bar__top__user 
-      .side_bar__top__user--name masa
+      .side_bar__top__user--name 
+        = current_user.name
       .side_bar__top__user--icons 
         = link_to "#" do
           = icon('far', 'edit')
-        = link_to "#" do
+        = link_to edit_user_path(current_user.id) do
           = icon('fas', 'bahai')
 
   .side_bar__group
