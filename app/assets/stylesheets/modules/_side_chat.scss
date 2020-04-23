@@ -35,18 +35,19 @@
     &__list {
       height: 91px;
       overflow: hidden;
-      color: $whiteColor;
       &--name {
         @include size(15px, 260px);
         line-height: 15px;
         @include font(15px);
         margin: 20px 0px 0px 20px;
+        color: $whiteColor;
       }
       &--message {
         @include size(11px, 260px);
         @include font(11px);
         line-height: 11px;
         margin: 5px 0px 0px 20px;
+        color: $whiteColor;
       }
     }
   }
