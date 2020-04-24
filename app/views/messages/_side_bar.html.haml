@@ -12,17 +12,19 @@
   .side_bar__group
     - current_user.groups.each do |group|
       .side_bar__group__list
-        = link_to '#' do
+        = link_to group_messages_path(group) do
           .side_bar__group__list--name
             =group.name 
           .side_bar__group__list--message 
-            まだmesses
-    .side_bar__group__list
-      .side_bar__group__list--name techcamp
-      .side_bar__group__list--message まだメッセージがありません
-    .side_bar__group__list
-      .side_bar__group__list--name techcamp
-      .side_bar__group__list--message まだメッセージがありません
-    .side_bar__group__list
-      .side_bar__group__list--name techcamp
-      .side_bar__group__list--message まだメッセージがありません
+            = group.show_last_message
+    
+    
+    -# .side_bar__group__list
+    -#   .side_bar__group__list--name techcamp
+    -#   .side_bar__group__list--message まだメッセージがありません
+    -# .side_bar__group__list
+    -#   .side_bar__group__list--name techcamp
+    -#   .side_bar__group__list--message まだメッセージがありません
+    -# .side_bar__group__list
+    -#   .side_bar__group__list--name techcamp
+    -#   .side_bar__group__list--message まだメッセージがありません
