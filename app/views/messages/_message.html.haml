@@ -1,0 +1,19 @@
+.main_chat__message__content
+  .main_chat__message__content--name
+    = message.user.name
+    %span
+      = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
+  - if message.body.present?
+    .main_chat__message__content--message
+      = message.body
+  = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
+
+  -#  -@messages.each do |message|
+  -# .main_chat__message__content
+  -#   .main_chat__message__content--name
+  -#     =message.user.name
+  -#     %span 
+  -#       =message.created_at
+  -#   .main_chat__message__content--message
+  -#     =message.body
+  -#   .messages
