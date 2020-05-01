@@ -1,5 +1,5 @@
 #サーバ上でのアプリケーションコードが設置されているディレクトリを変数に入れておく
-app_path = (File.expand_path('../../../', __FILE__),"current", "Gemfile)
+app_path = File.expand_path('../../../', __FILE__)
 
 #アプリケーションサーバの性能を決定する
 worker_processes 1
@@ -53,4 +53,10 @@ end
 
 after_fork do |_server, _worker|
   defined?(ActiveRecord::Base) && ActiveRecord::Base.establish_connection
+end
+
+current_path = "/path/to/project/current"
+
+before_exec do |server|
+  ENV['BUNDLE_GEMFILE'] = "#{current_path}/Gemfile"
 end
