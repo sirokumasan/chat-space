@@ -70,7 +70,8 @@ $(function() {
       $('.message--btn').prop('disabled', false);
     })
     .fail(function() {
-      alert("メッセージの送信に失敗しました");
+      alert("メッセージを入力してください");
+      $('form')[0].reset();
     })
   });
 
