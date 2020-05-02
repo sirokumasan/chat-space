@@ -71,7 +71,7 @@ $(function() {
     })
     .fail(function() {
       alert("メッセージを入力してください");
-      $('form')[0].reset();
+      $('.message--btn').prop('disabled', false);
     })
   });
 
