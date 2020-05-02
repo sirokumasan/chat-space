@@ -20,11 +20,6 @@
       &--icons {
         @include size(20px, 60px);
         @include flex();
-        a {
-          text-decoration: none;
-          color: $whiteColor;
-          margin-right: 5px;
-        }
       }
     }
   }
@@ -52,4 +47,10 @@
       }
     }
   }
+}
+
+a {
+  text-decoration: none;
+  color: $whiteColor;
+  margin-right: 5px;
 }
