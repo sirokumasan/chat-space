@@ -1,37 +1,51 @@
 $(function() {
 
   function buildHTML(message) {
-    if(message.image) {
+    if(message.image && message.body) {
       var html =  `<div class="main_chat__message__content" data-message-id="${message.id}" style="user-select: auto;">
                     <div class="main_chat__message__content--name" style="user-select: auto;">
-                    ${message.user_name}
-                    <span style="user-select: auto;">
-                    ${message.created_at}
+                      ${message.user_name}
+                      <span style="user-select: auto;">
+                      ${message.created_at}
                     </span>
                     </div>
                     <div class="main_chat__message__content--message" style="user-select: auto;">
-                    <div class="main_chat__message__content--message--text" style="user-select: auto;">
-                    ${message.body}
+                      <div class="main_chat__message__content--message--text" style="user-select: auto;">
+                        ${message.body}
+                      </div>
+                      <img class="lower-message__image" src="${message.image}">
                     </div>
-                    <img class="lower-message__image" src="${message.image}">
+                  </div>`
+    }else if(message.image) {
+      var html =  `<div class="main_chat__message__content" data-message-id="${message.id}" style="user-select: auto;">
+                    <div class="main_chat__message__content--name" style="user-select: auto;">
+                      ${message.user_name}
+                      <span style="user-select: auto;">
+                      ${message.created_at}
+                    </span>
                     </div>
-                    </div>`
+                    <div class="main_chat__message__content--message" style="user-select: auto;">
+                      <img class="lower-message__image" src="${message.image}">
+                    </div>
+                  </div>`
+
     }else{
       var html = `<div class="main_chat__message__content" data-message-id="${message.id}" style="user-select: auto;">
                     <div class="main_chat__message__content--name" style="user-select: auto;">
-                    ${message.user_name}
-                    <span style="user-select: auto;">
-                    ${message.created_at}
+                      ${message.user_name}
+                      <span style="user-select: auto;">
+                      ${message.created_at}
                     </span>
                     </div>
                     <div class="main_chat__message__content--message" style="user-select: auto;">
-                    <div class="main_chat__message__content--message--text" style="user-select: auto;">
-                    ${message.body}
+                      <div class="main_chat__message__content--message--text" style="user-select: auto;">
+                        ${message.body}
+                     </div>
                     </div>
-                   
-                    </div>
-                    </div>`
+                  </div>`
     }
+    
+   
     return html;
 
   }

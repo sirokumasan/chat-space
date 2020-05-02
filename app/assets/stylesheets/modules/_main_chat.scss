@@ -46,7 +46,6 @@
     background-color: #fafafa;
     overflow: scroll;
     &__content {
-      // height: 88px;
       margin-left: 40px;
       &--name {
         color: #333333;
@@ -61,12 +60,15 @@
         font-weight: normal;
       }
       &--message {
-        margin: 12px 0px 46px;
+        margin: 0px 0px 46px;
         &--text {
           height: 14px;
           line-height: 14px;
           color: #434A54;
-          margin-bottom: 12px;
+          margin-top: 12px;
+        }
+        .lower-message__image {
+          margin-top: 12px;
         }
       }
     }
