@@ -57,6 +57,6 @@ end
 
 current_path = "/path/to/project/current"
 
-before_exec do |server|
-  ENV['BUNDLE_GEMFILE'] = "#{current_path}/Gemfile"
-end
+# before_exec do |server|
+#   ENV['BUNDLE_GEMFILE'] = "#{current_path}/Gemfile"
+# end
